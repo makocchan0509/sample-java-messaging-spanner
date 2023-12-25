@@ -1,0 +1,13 @@
+
+CREATE TABLE shops (
+    shopId   STRING(36) NOT NULL DEFAULT (GENERATE_UUID()),
+    shopName  STRING(1024),
+    describe  STRING(1024)
+) PRIMARY KEY (shopId);
+
+CREATE TABLE items (
+    shopId     STRING(36) NOT NULL,
+    itemId     STRING(36) NOT NULL DEFAULT (GENERATE_UUID()),
+    itemName   STRING(1024),
+) PRIMARY KEY (shopId, itemId),
+INTERLEAVE IN PARENT shops ON DELETE CASCADE;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Integration GCP sample</title>
+</head>
+<body>
+<div name="formDiv">
+    <form action="/publishMessage" method="post">
+        Publish message: <input type="text" name="message" /> <input type="submit" value="Publish!"/>
+    </form>
+</div>
+<div name="formShop">
+    <form action="/createShop" method="post">
+        Shop:<br>
+        Shop Name: <input type="text" name="shopName" /><br>
+        Describe: <input type="text" name="describe" /><br>
+        <input type="submit" value="Create"/>
+    </form>
+</div>
+<div name="formItem">
+    <form action="/createItem" method="post">
+        Item:<br>
+        ShopId Name<input type="text" name="shopId" /><br>
+        Item Name<input type="text" name="itemName" /><br>
+        <input type="submit" value="Create"/>
+    </form>
+</div>
+</body>
+</html>
